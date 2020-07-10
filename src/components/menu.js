@@ -2,11 +2,24 @@ import React from "react"
 import { nominalTypeHack } from "prop-types"
 import { Link } from "gatsby"
 
+const contactStyle = {
+  color: "coral",
+  borderWidth: "2px",
+  borderStyle: "solid",
+  borderRadius: "5px",
+  padding: "0.5em",
+  fontFamily: `Arial, Helvetica, sans-serif`,
+}
+
+const menuStyle = {
+  fontFamily: `Arial, Helvetica, sans-serif`,
+}
+
 const Menu = () => (
   <div
     style={{
-      background: "f4f4f4",
-      paddingTop: "10px",
+      background: "white",
+      paddingTop: "35px",
     }}
   >
     <ul
@@ -17,16 +30,29 @@ const Menu = () => (
       }}
     >
       <li>
-        <Link to="/">Home</Link>
+        <Link style={menuStyle} to="/">
+          HOME
+        </Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link style={menuStyle} to="/about">
+          ABOUT
+        </Link>
       </li>
       <li>
-        <Link to="/services">Services</Link>
+        <Link style={menuStyle} to="/services">
+          SERVICES
+        </Link>
       </li>
       <li>
-        <Link to="/blog">Blog</Link>
+        <Link style={menuStyle} to="/blog">
+          BLOG
+        </Link>
+      </li>
+      <li>
+        <Link style={contactStyle} to="/">
+          CONTACT
+        </Link>
       </li>
     </ul>
   </div>
